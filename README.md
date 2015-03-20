@@ -39,35 +39,35 @@ All plugins here are clone of their original repository. Vundle is being used as
 * [base16-vim](https://github.com/chriskempson/base16-vim): Base 16 for Vim.
 
 # Mapping
-    * tab navigation like Firefox
+* tab navigation like Firefox
     nnoremap <C-h> :tabprevious<CR>
     nnoremap <C-s> :tabnext<CR>
-    * turn off search highlight 
+* turn off search highlight 
     nnoremap <Leader><Space> :nohlsearch<CR>
-    * space open/close folds 
+* space open/close folds 
     nnoremap <Space> za
-    * move vertically by visual line 
+* move vertically by visual line 
     nnoremap j gj
     nnoremap k gk
-    * move to beginning/end of the line 
+* move to beginning/end of the line 
     nnoremap B ^
     nnoremap E $
-    * reset $/^
+* reset $/^
     nnoremap $ <Nop>
     nnoremap ^ <Nop>
-    * highlight last inserted text
+* highlight last inserted text
     nnoremap gV `[v`] 
-    * jk is escape
+* jk is escape
     inoremap jk <Esc>
-    * Set leader key to ,
+* Set leader key to ,
     let mapleader=","
-    * php annotations
+* php annotations
     map <C-f> :call pdv#DocumentWithSnip()<CR>
-    * show/hide methode and parameters
+* show/hide methode and parameters
     map <C-R> :TagbarToggle<CR>
-    * NerdTree 
+* NerdTree 
     map <C-n> nNERDTree<cr>
-    * Toggle the relative number
+* Toggle the relative number
     nnoremap rn :call NumberToggle()<cr>
 
 # Thanks
