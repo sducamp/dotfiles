@@ -72,7 +72,7 @@ nnoremap B ^
 nnoremap E $
 ```
 reset $/^
-``
+```
 nnoremap $ <Nop>
 nnoremap ^ <Nop>
 ```
