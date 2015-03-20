@@ -20,10 +20,9 @@ My first personal configuration of Vim for web development.
 
 5. Compile [Vimproc](https://github.com/Shougo/vimproc.vim)
 
-        ```
         cd ~/.vim/bundle/vimproc.vim
         make
-        ```
+
 # Plugins
 All plugins here are clone of their original repository. Vundle is being used as a plugins manager.
 
