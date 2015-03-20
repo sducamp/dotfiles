@@ -75,6 +75,17 @@ set wildmenu " visual autocomplete for command menu
 " tab navigation like Firefox
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-s> :tabnext<CR>
+" Relative number / number
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set relativenumber!
+    else
+        set relativenumber
+    endif
+endfunction
+
+nnoremap rn :call NumberToggle()<cr>
+
 " }}}
 " Indentations {{{
 set autoindent " automatic indentation
