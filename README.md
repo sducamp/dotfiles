@@ -8,25 +8,22 @@ My first personal configuration of Vim for web development.
         
 2. Create symlinks for vimrc:
 
-    ```
-    ln -s ~/.vim/.vimrc ~/.vimrc 
-    ```
+        ln -s ~/.vim/.vimrc ~/.vimrc 
+
 3. Clone vundle repository inside the bundle folder:
 
-    ```
-    git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
-    ```
+        git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+
 4. Open Macvim and install the plugins with the following command line:
 
-    ```
-    :PluginInstall
-    ```
+        :PluginInstall
+
 5. Compile [Vimproc](https://github.com/Shougo/vimproc.vim)
 
-    ```
-    cd ~/.vim/bundle/vimproc.vim
-    make
-    ```
+        ```
+        cd ~/.vim/bundle/vimproc.vim
+        make
+        ```
 # Plugins
 All plugins here are clone of their original repository. Vundle is being used as a plugins manager.
 
