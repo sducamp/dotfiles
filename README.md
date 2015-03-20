@@ -81,17 +81,29 @@ highlight last inserted text
 nnoremap gV `[v`] 
 ```
 jk is escape
-`inoremap jk <Esc>`
+```
+inoremap jk <Esc>
+```
 Set leader key to ,
-`let mapleader=","`
+```
+let mapleader=","
+```
 php annotations
-`map <C-f> :call pdv#DocumentWithSnip()<CR>`
+```
+map <C-f> :call pdv#DocumentWithSnip()<CR>
+```
 show/hide methode and parameters
-`map <C-R> :TagbarToggle<CR>`
+```
+map <C-R> :TagbarToggle<CR>
+```
 NerdTree 
-`map <C-n> nNERDTree<cr>`
+```
+map <C-n> nNERDTree<cr>
+```
 Toggle the relative number
-`nnoremap rn :call NumberToggle()<cr>`
+```
+nnoremap rn :call NumberToggle()<cr>
+```
 
 # Thanks
 A special thank you to [Nicholas](https://github.com/nicholasc). 
