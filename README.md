@@ -3,16 +3,16 @@ My first personal configuration of Vim for web development.
 
 # Manual installation
 1. Check out the source form github:
-    git clone https://github.com/sducamp/dotfiles.git ~/.vim 
+        git clone https://github.com/sducamp/dotfiles.git ~/.vim 
 2. Create symlinks for vimrc:
-    ln -s ~/.vim/.vimrc ~/.vimrc 
+        ln -s ~/.vim/.vimrc ~/.vimrc 
 3. Clone vundle repository inside the bundle folder:
-    git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+        git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 4. Open Macvim and install the plugins with the following command line:
-    :PluginInstall
+        :PluginInstall
 5. Compile [Vimproc](https://github.com/Shougo/vimproc.vim) 
-    cd ~/.vim/bundle/vimproc.vim
-    make
+        cd ~/.vim/bundle/vimproc.vim
+        make
 
 # Plugins
 All plugins here are clone of their original repository. Vundle is being used as a plugins manager.
@@ -39,36 +39,36 @@ All plugins here are clone of their original repository. Vundle is being used as
 * [base16-vim](https://github.com/chriskempson/base16-vim): Base 16 for Vim.
 
 # Mapping
-* tab navigation like Firefox
-    nnoremap <C-h> :tabprevious<CR>
-    nnoremap <C-s> :tabnext<CR>
-* turn off search highlight 
-    nnoremap <Leader><Space> :nohlsearch<CR>
-* space open/close folds 
-    nnoremap <Space> za
-* move vertically by visual line 
-    nnoremap j gj
-    nnoremap k gk
-* move to beginning/end of the line 
-    nnoremap B ^
-    nnoremap E $
-* reset $/^
-    nnoremap $ <Nop>
-    nnoremap ^ <Nop>
-* highlight last inserted text
-    nnoremap gV `[v`] 
-* jk is escape
-    inoremap jk <Esc>
-* Set leader key to ,
-    let mapleader=","
-* php annotations
-    map <C-f> :call pdv#DocumentWithSnip()<CR>
-* show/hide methode and parameters
-    map <C-R> :TagbarToggle<CR>
-* NerdTree 
-    map <C-n> nNERDTree<cr>
-* Toggle the relative number
-    nnoremap rn :call NumberToggle()<cr>
+tab navigation like Firefox
+        nnoremap <C-h> :tabprevious<CR>
+        nnoremap <C-s> :tabnext<CR>
+turn off search highlight 
+        nnoremap <Leader><Space> :nohlsearch<CR>
+space open/close folds 
+        nnoremap <Space> za
+move vertically by visual line 
+        nnoremap j gj
+        nnoremap k gk
+move to beginning/end of the line 
+        nnoremap B ^
+        nnoremap E $
+reset $/^
+        nnoremap $ <Nop>
+        nnoremap ^ <Nop>
+highlight last inserted text
+        nnoremap gV `[v`] 
+jk is escape
+        inoremap jk <Esc>
+Set leader key to ,
+        let mapleader=","
+php annotations
+        map <C-f> :call pdv#DocumentWithSnip()<CR>
+show/hide methode and parameters
+        map <C-R> :TagbarToggle<CR>
+NerdTree 
+        map <C-n> nNERDTree<cr>
+Toggle the relative number
+        nnoremap rn :call NumberToggle()<cr>
 
 # Thanks
-    A special thank you to [Nicholas](https://github.com/nicholasc). 
+A special thank you to [Nicholas](https://github.com/nicholasc). 
