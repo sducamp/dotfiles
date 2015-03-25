@@ -20,7 +20,6 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'm2mdas/phpcomplete-extended'
-Plugin 'StanAngeloff/php.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
@@ -36,6 +35,14 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'chriskempson/base16-vim'
+
+" Language files
+Plugin 'StanAngeloff/php.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
+Plugin 'othree/html5.vim'
+Plugin 'plasticboy/vim-markdown'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -161,6 +168,16 @@ let g:syntastic_check_on_wq = 0
 " Git {{{
 " Git settings 
 let g:gitgutter_max_signs = 500
+" }}}
+" Fugitive {{{
+" Fugitive configuration
+map <leader>gw :Gwrite<cr>
+map <leader>gs :Gstatus<cr>
+map <leadeR>gc :Gcommit<cr>
+map <leader>gd :Gdiff<cr>
+map <leader>gp :Gpull<cr>
+map <leader>gg :Gpush<cr>
+map <leader>gm :Git mergetool<cr>
 " }}}
 " NERDTree {{{
 " NERDTree settings 
