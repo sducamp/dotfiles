@@ -104,6 +104,16 @@ Toggle the relative number
 ```
 nnoremap rn :call NumberToggle()<cr>
 ```
+Fugitive configuration
+``
+map <leader>gw :Gwrite<cr>
+map <leader>gs :Gstatus<cr>
+map <leadeR>gc :Gcommit<cr>
+map <leader>gd :Gdiff<cr>
+map <leader>gp :Gpull<cr>
+map <leader>gg :Gpush<cr>
+map <leader>gm :Git mergetool<cr>
+```
 
 # Thanks
 A special thank you to [Nicholas](https://github.com/nicholasc). 
