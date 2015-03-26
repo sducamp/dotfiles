@@ -105,7 +105,7 @@ Toggle the relative number
 nnoremap rn :call NumberToggle()<cr>
 ```
 Fugitive configuration
-``
+```
 map <leader>gw :Gwrite<cr>
 map <leader>gs :Gstatus<cr>
 map <leadeR>gc :Gcommit<cr>

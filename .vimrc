@@ -182,6 +182,7 @@ map <leader>gm :Git mergetool<cr>
 " NERDTree {{{
 " NERDTree settings 
 let NERDTreeShowHidden=1
+let g:NERDTreeQuitOnOpen = 1
 map <C-n> :NERDTree<cr>
 " }}}
 " Modelines {{{
