@@ -35,6 +35,7 @@ Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'chriskempson/base16-vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
@@ -279,5 +280,13 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+" }}}
+" Multi Cursor {{{ 
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-c>'
+let g:multi_cursor_prev_key='<C-P>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
 " }}}
 " vim:foldmethod=marker:foldlevel=0

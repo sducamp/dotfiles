@@ -46,6 +46,7 @@ All plugins here are clone of their original repository. Vundle is being used as
 * [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim.
 * [Stupid-EasyMotion](https://github.com/joequery/Stupid-EasyMotion): A dumbed down version of EanyMotion that aids navigation no che current line.
 * [base16-vim](https://github.com/chriskempson/base16-vim): Base 16 for Vim.
+* [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): True Sublime Text style multiple selections for Vim.
 
 # Mapping
 tab navigation like Firefox
@@ -113,6 +114,13 @@ map <leader>gd :Gdiff<cr>
 map <leader>gp :Gpull<cr>
 map <leader>gg :Gpush<cr>
 map <leader>gm :Git mergetool<cr>
+```
+Vim Multi Cursors
+```
+let g:multi_cursor_next_key='<C-c>'
+let g:multi_cursor_prev_key='<C-P>'
+let g:multi_cursor_skip_key='<C-X>'
+let g:multi_cursor_quit_key='<Esc>'
 ```
 
 # Thanks
