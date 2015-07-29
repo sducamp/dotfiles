@@ -20,7 +20,7 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'm2mdas/phpcomplete-extended'
-Plugin 'Shougo/neocomplete.vim'
+ Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
@@ -36,6 +36,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'chriskempson/base16-vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
@@ -201,12 +202,14 @@ autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 0
 " Use smartcase.
-let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#enable_smart_case = 0
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+let g:phpcomplete_index_composer_command="composer.phar"
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
