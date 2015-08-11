@@ -37,7 +37,7 @@ Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'chriskempson/base16-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
-Plugin 'hallettj/jslint.vim'
+Plugin 'wookiehangover/jshint.vim'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
