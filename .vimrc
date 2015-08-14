@@ -19,7 +19,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
-Plugin 'm2mdas/phpcomplete-extended'
+"Plugin 'm2mdas/phpcomplete-extended'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
@@ -38,6 +39,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'wookiehangover/jshint.vim'
+Plugin 'mkusher/padawan.vim', { 'do': './install.sh' }
+Plugin 'mkusher/padawan.php'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
@@ -45,6 +48,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
 Plugin 'othree/html5.vim'
 Plugin 'plasticboy/vim-markdown'
+
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
