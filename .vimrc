@@ -1,4 +1,3 @@
-
 " Plugins {{{
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -39,8 +38,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'wookiehangover/jshint.vim'
-Plugin 'mkusher/padawan.vim' 
 Plugin 'yonchu/accelerated-smooth-scroll'
+Plugin 'mkusher/padawan.vim'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
@@ -77,15 +76,15 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 " }}}
-" UI config {{{  
+" UI config {{{
 colorscheme base16-ocean " My colorscheme
 set background=dark
 set transparency=5
 set guifont:Menlo\ Regular:h14 " change the font size
 set number " show line numbers
-set showcmd " show command in the bottom bar 
-set cursorline " highlight current line 
-set wildmenu " visual autocomplete for command menu 
+set showcmd " show command in the bottom bar
+set cursorline " highlight current line
+set wildmenu " visual autocomplete for command menu
 " tab navigation like Firefox
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-s> :tabnext<CR>
@@ -105,29 +104,29 @@ nnoremap rn :call NumberToggle()<cr>
 set autoindent " automatic indentation
 set smartindent
 set tabstop=4 " number of spaces per tab
-set softtabstop=4 " number of spaces in tab when editing 
-set expandtab " tabs are spaces 
-set shiftwidth=4 
+set softtabstop=4 " number of spaces in tab when editing
+set expandtab " tabs are spaces
+set shiftwidth=4
 " }}}
 " Search {{{
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
-" turn off search highlight 
+" turn off search highlight
 nnoremap <Leader><Space> :nohlsearch<CR>
 "}}}
 " Folds configurations {{{
-set foldenable " enable folding 
-set foldlevelstart=10 " open most folds by default 
-set foldnestmax=10 " 10 nested fold max 
-" space open/close folds 
+set foldenable " enable folding
+set foldlevelstart=10 " open most folds by default
+set foldnestmax=10 " 10 nested fold max
+" space open/close folds
 nnoremap <Space> za
 set foldmethod=indent " fold based on indent level
 " }}}
 " Movements {{{
-" move vertically by visual line 
+" move vertically by visual line
 nnoremap j gj
 nnoremap k gk
-" move to beginning/end of the line 
+" move to beginning/end of the line
 nnoremap B ^
 nnoremap E $
 " reset $/^
@@ -136,7 +135,7 @@ nnoremap ^ <Nop>
 " }}}
 " Shorcuts {{{
 " highlight last inserted text
-nnoremap gV `[v`] 
+nnoremap gV `[v`]
 " jk is escape
 inoremap jk <Esc>
 let mapleader="," " Set a new leader key
@@ -146,12 +145,12 @@ map <C-f> :call pdv#DocumentWithSnip()<CR>
 map <C-R> :TagbarToggle<CR>
 " }}}
 " Backups {{{
-" Set the backup files 
-set backup 
+" Set the backup files
+set backup
 set backupdir=~/.vim-tmp,$/tmp,/var/tmp/,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/tmp,/var/tmp$,/tmp
-set writebackup 
+set writebackup
 " }}}
 " CtrP {{{
 " CtrlP settings
@@ -167,13 +166,13 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " }}}
 " Git {{{
-" Git settings 
+" Git settings
 let g:gitgutter_max_signs = 500
 " }}}
 " Fugitive {{{
@@ -187,13 +186,13 @@ map <leader>gg :Gpush<cr>
 map <leader>gm :Git mergetool<cr>
 " }}}
 " NERDTree {{{
-" NERDTree settings 
+" NERDTree settings
 let NERDTreeShowHidden=1
 let g:NERDTreeQuitOnOpen = 1
 map <C-n> :NERDTree<cr>
 " }}}
 " Modelines {{{
-set modelines=1 " activate the modelines 
+set modelines=1 " activate the modelines
 " }}}
 " Snippets {{{
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
@@ -213,7 +212,7 @@ let g:neocomplete#enable_smart_case = 0
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+"autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 let g:phpcomplete_index_composer_command="composer.phar"
 
 " Define dictionary.
@@ -289,7 +288,7 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " }}}
-" Multi Cursor {{{ 
+" Multi Cursor {{{
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-c>'
 let g:multi_cursor_prev_key='<C-P>'
