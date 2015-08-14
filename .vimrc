@@ -39,8 +39,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'wookiehangover/jshint.vim'
-"Plugin 'mkusher/padawan.vim', { 'do': './install.sh' }
-"Plugin 'mkusher/padawan.php'
+Plugin 'mkusher/padawan.vim' 
 Plugin 'yonchu/accelerated-smooth-scroll'
 
 " Language files
@@ -201,7 +200,7 @@ let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 " }}}
 " ExpendTab {{{
 " set expandtab
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+"autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 " }}}
 " NeoComplete {{{
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
