@@ -39,8 +39,9 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'wookiehangover/jshint.vim'
-Plugin 'mkusher/padawan.vim', { 'do': './install.sh' }
-Plugin 'mkusher/padawan.php'
+"Plugin 'mkusher/padawan.vim', { 'do': './install.sh' }
+"Plugin 'mkusher/padawan.php'
+Plugin 'yonchu/accelerated-smooth-scroll'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
