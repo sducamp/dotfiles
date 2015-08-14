@@ -49,6 +49,7 @@ All plugins here are clone of their original repository. Vundle is being used as
 * [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors): True Sublime Text style multiple selections for Vim.
 * [tpope/vim-surround] (https://github.com/tpope/vim-surround): The plugin provides mappings to easily delete, change and add such surroundings in pairs.
 * [yonchu/accelerated-smooth-scroll] (https://github.com/yonchu/accelerated-smooth-scroll): Vim plugin for accelerated smooth scroll.
+* [wookiehangover/jshint.vim] (https://github.com/wookiehangover/jshint.vim): JSHint fork of jslint.vim
 
 # Mapping
 tab navigation like Firefox
