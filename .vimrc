@@ -1,4 +1,9 @@
-" Plugins {{{
+"  Default config {{{
+set noeol
+au BufWritePre * :set binary | set noeol
+au BufWritePost * :set nobinary | set eol
+"  }}}
+"  Plugins {{{
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -30,16 +35,21 @@ Plugin 'tobyS/vmustache'
 Plugin 'SirVer/ultisnips'
 Plugin 'tobyS/pdv'
 Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/nerdcommenter'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'chriskempson/base16-vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'yonchu/accelerated-smooth-scroll'
 Plugin 'mkusher/padawan.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'aaronbieber/vim-quicktask'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
@@ -85,6 +95,7 @@ set number " show line numbers
 set showcmd " show command in the bottom bar
 set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
+set colorcolumn=81 " Highligth the column 81
 " tab navigation like Firefox
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-s> :tabnext<CR>
@@ -98,6 +109,9 @@ function! NumberToggle()
 endfunction
 
 nnoremap rn :call NumberToggle()<cr>
+" Highlight all over the 80 column
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%>80v.\+/
 
 " }}}
 " Indentations {{{
@@ -140,7 +154,7 @@ nnoremap gV `[v`]
 inoremap jk <Esc>
 let mapleader="," " Set a new leader key
 " php annotations
-map <C-f> :call pdv#DocumentWithSnip()<CR>
+map <leader>f :call pdv#DocumentWithSnip()<CR>
 " show/hide methode and parameters
 map <C-R> :TagbarToggle<CR>
 " }}}
@@ -296,4 +310,11 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 " }}}
+" Airlin {{{
+set laststatus=2
+" }}}
+" QuickTask {{{
+let g:quicktask_autosave = 1
+let g:quicktask_snip_path = '~/tasks'
+
 " vim:foldmethod=marker:foldlevel=0
