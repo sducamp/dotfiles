@@ -29,7 +29,7 @@ All plugins here are clone of their original repository. Vundle is being used as
 * [NerdTree](https://github.com/scrooloose/nerdtree): A tree explorer plugin fon Vim.
 * [Snipmate](https://github.com/garbas/vim-snipmate): TexteMate's snippets for Vim.
 * [Unite](https://github.com/Shougo/unite.vim): Search and display form arbitrary sources like files, buffers, recents used files or registers.
-* [Phpcomplete-extended](https://github.com/m2mdas/phpcomplete-extended): Autocomplete plugin for PHP.
+* [Phpcomplete](https://github.com/shawncplus/phpcomplete.vim): Improved PHP omnicompletion.
 * [Php.vim](https://github.com/StanAngeloff/php.vim): PHP syntax.
 * [neocomplete](https://github.com/Shougo/neocomplete.vim): Next generation completion framework after neocomplcache.
 * [supertab](https://github.com/ervandew/supertab): Perform all your vim insert mode completion with Tab.
@@ -51,6 +51,14 @@ All plugins here are clone of their original repository. Vundle is being used as
 * [yonchu/accelerated-smooth-scroll] (https://github.com/yonchu/accelerated-smooth-scroll): Vim plugin for accelerated smooth scroll.
 * [wookiehangover/jshint.vim] (https://github.com/wookiehangover/jshint.vim): JSHint fork of jslint.vim
 * [mkusher/padawan.vim] (https://github.com/mkusher/padawan.vim): A vim plugin for padawan.php completion server
+* [mattn/emmet-vim] (https://github.com/mattn/emmet-vim): Emmet for Vim.
+* [aaronbieber/vim-quicktask] (https://github.com/aaronbieber/vim-quicktask): Quicktask is a lightweight Vim task management plugin.
+* [xolox/vim-notes] (https://github.com/xolox/vim-notes): Easy note taking in Vim.
+* [xolox/vim-misEasy note taking in Vimc] (https://github.com/xolox/vim-misc): Miscellaneous auto-load Vim scripts.
+* [pangloss/vim-javascript] (https://github.com/pangloss/vim-javascript): Vastly improved Javascript indentation and syntax support in Vim.
+* [elzr/vim-json] (https://github.com/elzr/vim-json): A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
+* [othree/html5.vim] (https://github.com/othree/html5.vim): HTML5 omnicomplete and syntax.
+* [plasticboy/vim-markdown] (https://github.com/plasticboy/vim-markdown): Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
 
 # Mapping
 tab navigation like Firefox

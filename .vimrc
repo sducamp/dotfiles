@@ -23,8 +23,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'msanders/snipmate.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
-"Plugin 'm2mdas/phpcomplete-extended'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'shawncplus/phpcomplete.vim'
+" Plugin 'm2mdas/phpcomplete-extended'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
@@ -75,7 +76,7 @@ Plugin 'plasticboy/vim-markdown'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -184,6 +185,7 @@ set statusline+=%*
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:Syntastic_javascript_chechers = ["jslint"]
 " }}}
 " Git {{{
 " Git settings
@@ -316,5 +318,46 @@ set laststatus=2
 " QuickTask {{{
 let g:quicktask_autosave = 1
 let g:quicktask_snip_path = '~/tasks'
+" }}}
+" Notes {{{
+let g:notes_directories = ['~/Dropbox/shared/notes']
+" }}}
+" Buffers function {{{
+function! BufSel(pattern)
+  let bufcount = bufnr("$")
+  let currbufnr = 1
+  let nummatches = 0
+  let firstmatchingbufnr = 0
+  while currbufnr <= bufcount
+    if(bufexists(currbufnr))
+      let currbufname = bufname(currbufnr)
+      if(match(currbufname, a:pattern) > -1)
+        echo currbufnr . ": ". bufname(currbufnr)
+        let nummatches += 1
+        let firstmatchingbufnr = currbufnr
+      endif
+    endif
+    let currbufnr = currbufnr + 1
+  endwhile
+  if(nummatches == 1)
+    execute ":buffer ". firstmatchingbufnr
+  elseif(nummatches > 1)
+    let desiredbufnr = input("Enter buffer number: ")
+    if(strlen(desiredbufnr) != 0)
+      execute ":buffer ". desiredbufnr
+    endif
+  else
+    echo "No matching buffers"
+  endif
+endfunction
+
+"Bind the BufSel() function to a user-command
+command! -nargs=1 Bs :call BufSel("<args>")
+
+"Map buffers command
+map <leader>b :buffers<cr>
+map <leader>nb :bnext<cr>
+map <leader>pb :bprevious<cr>
+" }}}
 
 " vim:foldmethod=marker:foldlevel=0
