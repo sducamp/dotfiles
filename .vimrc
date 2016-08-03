@@ -20,23 +20,26 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'scrooloose/nerdtree'
+Plugin 'ternjs/tern_for_vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'shawncplus/phpcomplete.vim'
-" Plugin 'm2mdas/phpcomplete-extended'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'm2mdas/phpcomplete-extended'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'gitdiff.vim'
+Plugin 'mnpk/vim-jira-complete'
 Plugin 'bling/vim-airline'
 Plugin 'tobyS/vmustache'
 Plugin 'SirVer/ultisnips'
 Plugin 'tobyS/pdv'
 Plugin 'majutsushi/tagbar'
-"Plugin 'scrooloose/nerdcommenter'
+" Plugin 'scrooloose/nerdcommenter'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'joequery/Stupid-EasyMotion'
@@ -58,6 +61,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
 Plugin 'othree/html5.vim'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'chrisbra/csv.vim'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -88,7 +92,7 @@ filetype plugin on
 " Put your non-Plugin stuff after this line
 " }}}
 " UI config {{{
-colorscheme base16-ocean " My colorscheme
+colorscheme base16-monokai " My colorscheme
 set background=dark
 set transparency=5
 set guifont:Menlo\ Regular:h14 " change the font size
@@ -173,7 +177,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_match_window=0
 let g:ctrlp_switch_buffer=0
 let g:ctrlp_path_mode=0
+let g:ctrlp_working_path_mode = ''
 let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
+let g:ctrlp_max_files=0 
 " }}}
 " Syntastic {{{
 " Syntastic setup
@@ -185,7 +191,8 @@ set statusline+=%*
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:Syntastic_javascript_chechers = ["jslint"]
+let g:syntastic_javascript_checkers = []
+" let g:Syntastic_javascript_chechers = ["JsHint"]
 " }}}
 " Git {{{
 " Git settings
@@ -320,7 +327,7 @@ let g:quicktask_autosave = 1
 let g:quicktask_snip_path = '~/tasks'
 " }}}
 " Notes {{{
-let g:notes_directories = ['~/Dropbox/shared/notes']
+let g:notes_directories = ['~/HD/sducamp/Dropbox/shared/notes']
 " }}}
 " Buffers function {{{
 function! BufSel(pattern)
@@ -358,6 +365,15 @@ command! -nargs=1 Bs :call BufSel("<args>")
 map <leader>b :buffers<cr>
 map <leader>nb :bnext<cr>
 map <leader>pb :bprevious<cr>
+map <leader>cb :bd<cr>
+" }}}
+"Jira AutoComplete {{{ 
+let g:jiracomplete_url = 'https://jira.gammadia.ch'
+let g:jiracomplete_username = 'sylvain'
+"}}}"
+" YouCompleteMe {{{
+map <leader>d :YcmCompleter GoToDefinition<cr>
+map <leader>r :YcmCompleter GoToReferences<cr>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0

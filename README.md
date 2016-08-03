@@ -23,6 +23,12 @@ My first personal configuration of Vim for web development.
         cd ~/.vim/bundle/vimproc.vim
         make
 
+6. Install [YouCompleMe](https://github.com/Valloric/YouCompleteMe)
+
+        Make sure you have CMake installed. You can use [Homebrew](http://brew.sh/) to install it.
+        cd ~/.vim/bundle/YouCompletMe/
+        ./install.py --tern-completer
+
 # Plugins
 All plugins here are clone of their original repository. Vundle is being used as a plugins manager.
 
@@ -59,6 +65,8 @@ All plugins here are clone of their original repository. Vundle is being used as
 * [elzr/vim-json] (https://github.com/elzr/vim-json): A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing. Pathogen-friendly.
 * [othree/html5.vim] (https://github.com/othree/html5.vim): HTML5 omnicomplete and syntax.
 * [plasticboy/vim-markdown] (https://github.com/plasticboy/vim-markdown): Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
+* [Valloric/YouCompleteMe] (https://github.com/Valloric/YouCompleteMe): A code-completion engine for Vim.
+* [ternjs/tern_for_vim] (https://github.com/ternjs/tern_for_vim): This is a Vim plugin that provides Tern-based JavaScript editing support.
 
 # Mapping
 tab navigation like Firefox
