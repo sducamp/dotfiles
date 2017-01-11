@@ -30,8 +30,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-git'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'gitdiff.vim'
 Plugin 'mnpk/vim-jira-complete'
 Plugin 'bling/vim-airline'
@@ -57,12 +59,13 @@ Plugin 'xolox/vim-misc'
 
 " Language files
 Plugin 'StanAngeloff/php.vim'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
 Plugin 'othree/html5.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'chrisbra/csv.vim'
-
+Plugin 'Raimondi/delimitMate'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -92,9 +95,16 @@ filetype plugin on
 " Put your non-Plugin stuff after this line
 " }}}
 " UI config {{{
-colorscheme base16-monokai " My colorscheme
+syntax on
+" if filereadable(expand("~/.vimrc_background"))
+"   let base16colorspace=256
+"     source ~/.vimrc_background
+" endif
+colorscheme  molokai " My colorscheme
+let g:molokai_original = 1
+" let base16colorspace=256
 set background=dark
-set transparency=5
+" set transparency=5
 set guifont:Menlo\ Regular:h14 " change the font size
 set number " show line numbers
 set showcmd " show command in the bottom bar
@@ -161,7 +171,7 @@ let mapleader="," " Set a new leader key
 " php annotations
 map <leader>f :call pdv#DocumentWithSnip()<CR>
 " show/hide methode and parameters
-map <C-R> :TagbarToggle<CR>
+" map <leader><t>:TagbarToggle<>
 " }}}
 " Backups {{{
 " Set the backup files
@@ -327,7 +337,7 @@ let g:quicktask_autosave = 1
 let g:quicktask_snip_path = '~/tasks'
 " }}}
 " Notes {{{
-let g:notes_directories = ['~/HD/sducamp/Dropbox/shared/notes']
+let g:notes_directories = ['~/Dropbox/shared/notes']
 " }}}
 " Buffers function {{{
 function! BufSel(pattern)
